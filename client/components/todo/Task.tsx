@@ -12,7 +12,7 @@ export function Mainbhai() {
 
   const GetTodos = async () => {
     try {
-      const response = await fetch("http://127.0.0.1:4000/todo");
+      const response = await fetch("https://go-to-do.onrender.com/todo");
       const jsonData = await response.json();
       setTodos(jsonData);
     } catch (err) {
@@ -21,7 +21,7 @@ export function Mainbhai() {
   };
   const deleteTask = async (id: any) => {
     try {
-      await fetch(`http://127.0.0.1:4000/todo`, {
+      await fetch(`https://go-to-do.onrender.com/todo`, {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ id: id }),
@@ -33,7 +33,7 @@ export function Mainbhai() {
   };
   const editTask = async (id: string, completed: boolean, title: string) => {
     try {
-      await fetch(`http://127.0.0.1:4000/todo/${id}`, {
+      await fetch(`https://go-to-do.onrender.com/todo/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ completed, title }),
@@ -50,7 +50,7 @@ export function Mainbhai() {
 
   const addTask = async (task: any) => {
     try {
-      const response = await fetch("http://127.0.0.1:4000/todo", {
+      const response = await fetch("https://go-to-do.onrender.com/todo", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ title: newTask, completed: false }),
