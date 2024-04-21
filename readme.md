@@ -1,4 +1,4 @@
-```markdown
+
 # Todo App
 
 This repository contains a simple Todo application with a Go server and a Next.js client.
@@ -18,7 +18,7 @@ This is a simple Go server that provides endpoints for todo operations.
 1. Clone the repository:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/animeshchaudhri/Go_to_do
 ```
 
 2. Navigate to the server directory:
@@ -101,8 +101,9 @@ The client provides a todo list interface where you can:
 - Next.js
 - React
 - Axios
+- Framer motion
+- tailwind
 
-#### License
+## License
 
-This project is licensed under the MIT License.
-```
+
