@@ -110,38 +110,42 @@ export function Mainbhai() {
             Add something
           </button>
         </div>
-        {todos.map((todo: any) => {
-          return (
-            <div key={todo.id} className="flex justify-center mt-4">
-              <div className="bg-purple-400 bg-opacity-25 backdrop-blur-md p-4 rounded-lg shadow-lg">
-                <h1 className="text-xl font-bold text-purple-800">
-                  {todo.title}
-                </h1>
-                <p
-                  className={todo.completed ? "text-green-500" : "text-red-500"}
-                >
-                  {todo.completed ? "Completed" : "Not Completed"}
-                </p>
-                <div className="flex justify-center mt-2">
-                  <button
-                    className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded mr-2"
-                    onClick={() => deleteTask(todo.id)}
-                  >
-                    Delete
-                  </button>
-                  <button
-                    className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded"
-                    onClick={() =>
-                      editTask(todo.id, todo.completed, todo.title)
+        <div className="overflow-y-scroll ">
+          {todos.map((todo: any) => {
+            return (
+              <div key={todo.id} className="flex justify-center  mt-4">
+                <div className="bg-purple-400 bg-opacity-25 backdrop-blur-md p-4 rounded-lg shadow-lg">
+                  <h1 className="text-xl font-bold text-purple-800">
+                    {todo.title}
+                  </h1>
+                  <p
+                    className={
+                      todo.completed ? "text-green-500" : "text-red-500"
                     }
                   >
-                    Edit
-                  </button>
+                    {todo.completed ? "Completed" : "Not Completed"}
+                  </p>
+                  <div className="flex justify-center mt-2">
+                    <button
+                      className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded mr-2"
+                      onClick={() => deleteTask(todo.id)}
+                    >
+                      Delete
+                    </button>
+                    <button
+                      className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded"
+                      onClick={() =>
+                        editTask(todo.id, todo.completed, todo.title)
+                      }
+                    >
+                      Edit
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </Backy>
 
       <Footer />
